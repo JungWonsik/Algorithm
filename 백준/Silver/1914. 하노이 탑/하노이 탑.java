@@ -6,9 +6,9 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();
-		BigInteger[] arr = new BigInteger[101];
+		BigInteger[] arr = new BigInteger[N+1];
 		arr[1] = BigInteger.ONE;
-		for (int i = 2; i <= 100; i++)
+		for (int i = 2; i <= N; i++)
 			arr[i] = arr[i-1].multiply(BigInteger.TWO).add(BigInteger.ONE);
 		sb.append(arr[N].toString()+"\n");
 		if (N <= 20) 
